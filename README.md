@@ -1,21 +1,12 @@
-# XXX collection
+# Agricultural land classification collection  ⚠️ Centralised
 
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/digital-land/XXX/blob/main/LICENSE)
-[![Run pipeline](https://github.com/digital-land/XXX-collection/actions/workflows/run.yml/badge.svg)](https://github.com/digital-land/XXX-collection/actions/workflows/run.yml)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/digital-land/brownfield-land/blob/master/LICENSE)
+[![Run pipeline](https://github.com/digital-land/agricultural-land-classification-collection/actions/workflows/run.yml/badge.svg)](https://github.com/digital-land/agricultural-land-classification-collection/actions/workflows/run.yml)
 
-The data and pipeline to build the [XXX dataset](https://www.digital-land.info/dataset/XXX).
+The data and pipeline to build the [agricultural land classification dataset](https://www.planning.data.gov.uk/dataset/agricultural-land-classification)
 
-# Collection
+The national dataset is in a format consistent with other Digital Land datasets as defined by the [agricultural-land-classification schema](https://github.com/digital-land/specification/blob/main/content/dataset/agricultural-land-classification.md?plain=1).
 
-* [collection/source.csv](collection/source.csv) — the list of data sources by organisation, see [specification/source](https://digital-land.github.io/specification/schema/source/)
-* [collection/endpoint.csv](collection/endpoint.csv) — the list of endpoint URLs for the collection, see [specification/endpoint](https://digital-land.github.io/specification/schema/endpoint)
-* [collection/resource/](collection/resource/) — collected resources
-
-*These files are now stored in AWS S3:*
-
-* [collection/log/](https://files.planning.data.gov.uk/XXX/collection/log/) — individual log JSON files, created by the collection process
-* [collection/log.csv](https://files.planning.data.gov.uk/XXX/collection/log.csv) — a collection log assembled from the individual log files, see [specification/log](https://digital-land.github.io/specification/schema/log)
-* [collection/resource.csv](https://files.planning.data.gov.uk/XXX/collection/resource.csv) — a list of collected resources, see [specification/resource](https://digital-land.github.io/specification/schema/resource)
 
 # Updating the collection
 
@@ -25,7 +16,11 @@ We recommend working in [virtual environment](http://docs.python-guide.org/en/la
     $ make init
     $ make collect
 
-# Building the datasets
+# Nightly collection
+
+The collection is [updated nightly](https://github.com/digital-land/agricultural-land-classification-collection/actions) by the [GitHub Action](.github/workflows/run.yml).
+
+# Building the national dataset
 
 The collected files can then be converted into a national dataset:
 
